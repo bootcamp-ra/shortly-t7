@@ -6,9 +6,14 @@ const STATUS_CODE = Object.freeze({
 });
 
 const STATUS_TEXT = Object.freeze({
+  OK: 'ok',
   CREATED: 'created',
   BAD_REQUEST: 'bad request',
 });
+
+function okResponse(res, text = STATUS_TEXT.OK) {
+  return res.status(STATUS_CODE.OK).send(text);
+}
 
 function createdResponse(res, text = STATUS_TEXT.CREATED) {
   return res.status(STATUS_CODE.CREATED).send(text);
@@ -23,4 +28,4 @@ function serverErrorResponse(res, error) {
   return res.status(STATUS_CODE.BAD_REQUEST).send('Deu ruim!!!');
 }
 
-export { badRequestResponse, serverErrorResponse, createdResponse };
+export { badRequestResponse, serverErrorResponse, createdResponse, okResponse };
