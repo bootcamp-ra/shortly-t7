@@ -11,6 +11,7 @@ const STATUS_TEXT = Object.freeze({
   BAD_REQUEST: 'bad request',
 });
 
+//Dica 3 - criei funções que serão reutilizadas
 function okResponse(res, text = STATUS_TEXT.OK) {
   return res.status(STATUS_CODE.OK).send(text);
 }

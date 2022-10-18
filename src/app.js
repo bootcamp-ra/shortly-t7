@@ -3,6 +3,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import { connection } from '../db/database.js';
 import signRoute from './routes/singRoutes.js';
+import urlRoute from './routes/urlRoutes.js';
 
 dotenv.config();
 const server = express();
@@ -16,6 +17,7 @@ server.get('/status', async (req, res) => {
 });
 
 server.use(signRoute);
+server.use(urlRoute);
 
 server.listen(process.env.PORT, () => {
   console.log(`Magic happens on ${process.env.PORT}`);

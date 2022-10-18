@@ -54,5 +54,4 @@ async function signin(req, res) {
   }
 }
 
-//'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjo0LCJpYXQiOjE2NjYwNDY0MDd9.ls8vpoYiEG4CPgEqruwxEabvHE48hVsV2360JpuXi1Q';
 export { signin, signup };
